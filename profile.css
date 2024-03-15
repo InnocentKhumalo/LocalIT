@@ -37,12 +37,8 @@ body{
     padding-top: 50px;
 }
 @media only screen and (max-width: 600px){
-.column-container{
-display-flex;
-    flex-direction: column;
-text-align: center;
+width: auto;
 height:auto;
-justify-content: center;
 }
 }
 .column1{
