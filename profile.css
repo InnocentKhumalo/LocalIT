@@ -40,6 +40,9 @@ body{
 .column-container{
 display-flex;
     flex-direction: column;
+text-align: center;
+height:auto;
+justify-content: center;
 }
 }
 .column1{
