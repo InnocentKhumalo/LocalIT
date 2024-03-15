@@ -36,13 +36,21 @@ body{
     padding: 10px;
     padding-top: 50px;
 }
-@media only screen and (max-width: 600px){
-.column-container{
-    width: auto;
-height:auto;
-    text-align: center;
-}
-}
+
+@media screen and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .form1 {
+    width: calc(50% - 20px); /* Adjust width as needed */
+    margin-right: 20px; /* Add spacing between forms */
+  }
+  .form2{
+    margin-right: 0; /* Remove margin from last form */
+  }
+}}
+
 .column1{
     width: 50%;
     box-sizing: border-box;
