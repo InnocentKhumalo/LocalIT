@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="navbar.css">
+    <title>Localit</title>
+
+    <style>
+        /* Style for the slideshow container */
+        .slideshow-container {
+          position: relative;
+          width: 100%;
+          margin: auto;
+        }
+    
+        /* Style for each slide */
+        .mySlides {
+          display: none;
+          width: 100%;
+          height: 500px;
+        }
+    
+        img {
+          top: 10px;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .fade {
+          animation-name: fade;
+          animation-duration: 1s;
+        }
+        .text {
+          position: absolute;
+          left: 18%;
+          right: 18%;
+          transform: translate(-50, -50);
+          color: black;
+          font-family: monospace;
+          font-weight: bold;
+          font-size: 35px;
+          text-align: center;
+          text-shadow: darkgray;
+          background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        @keyframes fade {
+          from {opacity: .4;}
+          to {opacity: 1;}
+        }
+
+.specific-part{
+margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+
+footer{
+    width: 100%;
+    position: absolute;
+    background:#0f1e4b;
+    color: #fff;
+    padding: 30px 0 10px;
+    line-height: 30px;
+}
+.row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.col{
+    flex-basis: 25%;
+    padding: 10px;
+}
+.col:nth-child(2),.col:nth-child(3){
+    flex-basis: 15%;
+}
+.logo-details{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: larger;
+font-weight: lighter;
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+ 
+@keyframes glow {
+    0%{
+      text-shadow: 0 0 10px #fff, 0 0  20px #f5db49, 0 0 30px #f5db49;
+    }
+    50% {
+      text-shadow: 0 0 20px #fff, 0 0  30px #f5db49, 0 0 40px #f5db49;
+    }
+    100% {
+      text-shadow: 0 0 10px #fff, 0 0  20px #f5db49, 0 0 30px #f5db49;
+    }
+  }
+  .glowing-text {
+      font-size: 30px;
+      color: #f5db49;
+      animation: glow 1.5s infinite;
+    }
+.col h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    position: relative;
+
+}
+.envelope{
+  font-size: 30px;
+  color: white;
+}
+.mail-id{
+    width: fit-content;
+    margin: 20px 0;
+}
+ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+form .far{
+    font-size: 18px;
+    margin-right: 10px;
+}
+form input{
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+form button .fa{
+    font-size: 16px;
+    color: #ccc;
+}
+
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 10px auto;
+}
+.copyright{
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    footer .row {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+}
+footer .logo-name{
+      width: 90%;
+}
+    footer {
+      position: unset;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    footer .col,
+    footer {
+      font-size: 14px;
+    }
+}
+@media (orientation: landscape) and (max-height: 500px) {
+    footer {
+      position: unset;
+    }
+}
+
+.credit{
+    text-align: center;
+    color: #6ccaf0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 40px;
+}
+
+.credit a{
+    text-decoration: none;
+    color: #0ED2F7;
+    font-weight: bold;
+}
+
+.search-results {
+    margin-top: 5px;
+}
+
+.result-item {
+    margin-bottom: 5px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.result-item:hover {
+    background-color: #e0e0e0;
+}
+      </style>
+</head>
+<body>
+    <header>
+        <nav>
+          <div>
+            <div class="topnav">
+              <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <a href="index.html"><i class="fas fa-home">Home</i></a>
+                <a class="sidebar-item" onclick="toggleDropdown('dropdown1') " href="#"><i class="fas fa-briefcase">Enterprises</i></a>
+                <ul class="dropdown" id="dropdown1" >
+                  <div class="dropdown-content">
+                    <ul>
+                      <li onclick=openShop()><a href="#" style="color: black;">Shop 1</a></li>
+                      <li onclick=openShop()><a href="#" style="color: black;">Shop 2</a></li>
+                      <li onclick=openShop()><a href="#" style="color: black;">Shop 3</a></li>
+                      <li onclick=openShop()><a href="#" style="color: black;">Shop 4</a></li>
+                      <li onclick=openShop()><a href="#" style="color: black;">Shop 5</a></li>
+                      <li onclick=openShop()><a href="#" style="color: black;">Shop 6</a></li>
+                    </ul>
+                  </div>
+                </ul>
+                <a href="registration.html"><i class="fas fa-edit ">Register Business</i></a>
+                <a href="onlineshopping.html"><i class="fas fa-shopping-cart ">Shop Online</i></a>
+                <a href="Adverts.html"><i class="fas fa-broadcast-tower ">Ardvetise Product</i></a>
+                <a href="services.html"><i class="fas fa-wrench">Services</i></a>
+                <a href="Review.html"><i class="fas fa-comments">Reviews</i></a>
+                <a class="sidebar-item" onclick="toggleDropdown('dropdown2') " href="#" ><i class="fas fa-envelope-open">Contact</i></a>
+                <ul class="dropdown" id="dropdown2">
+                <div class="dropdown-content">
+                
+                    
+                    <a href="https://www.facebook.com/KhumaloMorenaInnocent.org/" title="Facebook" target="_blank" class="fab fa-facebook" ></a>
+                    
+                      <a href="https://api.whatsapp.com/send?phone=+27639177942" title="Whatsapp" target="_blank" class="fab fa-whatsapp"></a>
+                    <br>
+                      <a href="tel:063-917-7942" title="Call" target="_blank" class="fa fa-phone"></a>
+                      <a href="mailto:kminnocent6@gmail.com?subject=subject text" title="Email" target="_blank" class="fa fa-envelope-open"></a>
+                </div>
+              </ul>
+              </ul>
+              <a href="#" onclick=showSidebar()><i style="font-size: 50px; color: navy; font-weight: bold; margin-left: 10px; margin-top: 20px;" class="fa fa-bars"></i></a>
+              <a href="#" onclick=showSearchpane() class="split"><i style="font-size: 50px; color: navy; font-weight: bold; margin-right: 10px; margin-top: 20px; border-radius: 50%;" class="fa fa-search"></i></a>
+              <ul class="searchpane">
+                <a href="#" onclick=hideSearchpane()><i class="fa fa-close" style="float: left; margin-left: 0;"></i></a>
+                <div class="search-container">
+                  <div class="searchtext">
+                  <input type="search" id="searchInput" placeholder="Search...">
+                  <button  onclick="search()" type="submit">Search</button>
+                  </div>
+                  <div id="searchResults" class="search-results">
+                    <!-- Search Results here!-->
+                  </div>
+                </div>
+
+              </ul>
+            <img src="SGN_02_28_2024_1709144466600.png" class="design">
+          </div>
+          </nav>
+          
+
+          <script src="script.js"></script>
+          <script>
+            function showSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'flex'
+            }
+            function hideSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'none'
+            }
+            function showSearchpane(){
+              const searchpane = document.querySelector('.searchpane')
+              searchpane.style.display = 'flex'
+            }
+            
+            function hideSearchpane(){
+                const sidebar = document.querySelector('.searchpane')
+                sidebar.style.display = 'none'
+            }
+            function toggleDropdown(dropdownId) {
+              var dropdown = document.getElementById(dropdownId);
+              dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+            }
+        </script>
+      
+         
+    </header>
+<div class="slideshow-container">
+  <!-- Slides -->
+  <div class="mySlides">
+    <img src="Screenshot.jpg" alt="Slide 1">
+    <div class="text"><p>YOUR TRUSTED ONLINE <br>PLATFORM <br>FOR SHOPPING <br>ADVERTISING<br>
+    SMALL & LOCAL ENTERPRESES </p></div>
+  </div>
+
+  <div class="mySlides">
+    <img src="Getty.jpg" alt="Slide 2">
+    <div class="text"> <p>YOUR TRUSTED ONLINE <br>PLATFORM <br>FOR SHOPPING <br>ADVERTISING<br>
+      SMALL & LOCAL ENTERPRESES </p></div>
+    
+  </div>
+
+  <div class="mySlides">
+    <img src="local.jpg" alt="Slide 3">
+    <div class="text"><p>YOUR TRUSTED ONLINE <br>PLATFORM <br>FOR SHOPPING <br>ADVERTISING<br>
+      SMALL & LOCAL ENTERPRESES </p></div>
+    
+  </div>
+
+  <div class="mySlides">
+      <img src="d.jpg" alt="Slide 4">
+      <div class="text"><p>YOUR TRUSTED ONLINE <br>PLATFORM <br>FOR SHOPPING <br>ADVERTISING<br>
+        SMALL & LOCAL ENTERPRESES </p></div>
+      
+  </div>
+
+  <div class="mySlides">
+    <img src="an.jpg" alt="Slide 5">
+    <div class="text"><p>YOUR TRUSTED ONLINE <br>PLATFORM <br>FOR SHOPPING <br>ADVERTISING<br>
+      SMALL & LOCAL ENTERPRESES </p></div>
+    
+  </div>
+
+  <div class="mySlides">
+    <img src="hot.jpg" alt="Slide 6">
+    <div class="text"><p>YOUR TRUSTED ONLINE <br>PLATFORM <br>FOR SHOPPING <br>ADVERTISING<br>
+      SMALL & LOCAL ENTERPRESES </p></div>
+    
+  </div>
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+slideIndex++;
+if (slideIndex > slides.length) {slideIndex = 1}
+slides[slideIndex-1].style.display = "block";
+setTimeout(showSlides, 2000);
+}
+
+function showOnlineshopping() {
+  window.location.href = 'onlineshopping.html';
+}
+
+</script>
+
+<div class="container" style="background: linear-gradient(to right, rgb(170, 166, 166), #f3f7fa);">
+  <div class="column2nd column3">
+    <img src="Photo_1709483278127.png" alt="">
+  </div>
+  <div class="column2nd column4" >
+    <h2 class="bold-text2">Shop Online </h2>
+    <p>Let's Shop! it is as easy as it looks,<br>just click the button below,<br>
+    To be directed to diverse brands from <br> all businesses within the platform. <br>
+  </p>
+  <p style="text-decoration: underline; font-weight: bold; font-style: oblique;">Buy all your favourite brands here!!</p>
+    <button class="dynamic-btn" onclick=showOnlineshopping()>Start Shopping</button>
+  </div>
+</div>
+
+<div class="shops-container">
+  <!-- Shop 1 -->
+  <div class="shop">
+    <h2>Business Name</h2>
+    <img src="company picture.png" alt="Shop 1 Image">
+    <p>To register your business on the website click below,<br>
+    your business can be among all businesses within the website.<br>
+  it is that simple!</button></p>
+    <button onclick=register()>Click to Register</button>
+  </div>
+
+  <!-- Shop 2 -->
+  <div class="shop">
+    <h2>Business Name</h2>
+    <img src="company picture.png" alt="Shop  Image">
+    <p>To register your business on the website click below,<br>
+    your business can be among all businesses within the website.<br>
+  it is that simple!</button></p>
+    <button onclick=register()>Click to Register</button>
+  </div>
+
+ <!-- Shop 3 -->
+ <div class="shop">
+  <h2>Business Name</h2>
+  <img src="company picture.png" alt="Shop  Image">
+  <p>To register your business on the website click below,<br>
+  your businesscan be among all businesses within the website.<br>
+it is that simple!</button></p>
+  <button onclick=register()>Click to Register</button>
+</div>
+
+<!-- Shop 4 -->
+ <div class="shop">
+  <h2>Business Name</h2>
+  <img src="company picture.png" alt="Shop 4 Image">
+  <p>To register your business on the website click below,<br>
+  your business can be among all businesses within the website.<br>
+it is that simple!</button></p>
+  <button onclick=register()>Click to Register</button>
+</div>
+
+<!-- Shop 5 -->
+<div class="shop">
+  <h2>Business Name</h2>
+  <img src="company picture.png" alt="Shop 5 Image">
+  <p>To register your business on the website click below,<br>
+  your business can be among all businesses within the website.<br>
+it is that simple!</button></p>
+  <button onclick=register()>Click to Register</button>
+</div>
+
+<!-- Shop 6 -->
+<div class="shop">
+  <h2>Business Name</h2>
+  <img src="company picture.png" alt="Shop 6 Image">
+  <p>To register your business on the website click below,<br>
+  your business can be among all businesses within the website.<br>
+it is that simple!</button></p>
+  <button onclick=register()>Click to Register</button>
+</div>
+ <script>
+  function register() {
+    window.location.href = 'registration.html';
+  }
+
+  function openShop() {
+    alert("Shop not registered Yet!!")
+  }
+ </script>
+</div>
+
+<div class="about" style="background-image: url(safe-shopping-1024x512.jpg); ">
+    <h3 class="bold-text">About Us:</h3>
+  <p class="contents">This platform is to help grow small businesses,<br>
+    imbrove market competency
+    and increase sales for all enterprises. <br> If you are an entrepreneur welcome!!<br>
+    Business owners this is the platform for you. <br> 
+    With this space you can create an online appearence <br> plus share helpful insight<br>
+    with just one click.
+   </p>
+</div>
+
+<footer class="specific-part" style="@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');">
+  <div class="row">
+      <div class="col">
+          <div class="logo-details glowing-text">
+                  <span class="logo_name">LocalIt</span>
+          </div>
+          <p>This is the most trusted online platform. The platofrm was specifically designed to to grow small and local businesses.</p>
+      </div>
+      <div class="col">
+          <h3>Developer details</h3>
+          <p>
+              Keep in touch with the developer <br />
+              by email or mobile number quicky
+          </p>
+          <p class="Email"><a href="mailto:kminnocent6@gmail.com?subject=subject text" title="Email" target="_blank">kminnocent6@gmail.com</a></p>
+          <p class="number"><a href="tel:063-917-7942" title="call" target="_blank">+2763 917 7942</a></p>
+      </div>
+      <div class="col">
+          <h3>QuickLinks</h3>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Register Business</a></li>
+          </ul>
+      </div>
+      <div class="col">
+          <h3>Leave A Message</h3>
+          <form>
+              <a href="#" class="envelope"><i class="fa fa-envelope"></i></a>
+              <input  type="text" id="textInput2" name="message" placeholder="Type your message">  
+              <button class="arrow" type="submit2"><i class="fas fa-arrow-right"></i></button>
+          </form>
+          <div>
+              <a class="Facebook" href="https://facebook.com/KhumaloMorenaInnocent.org/" title="Facebook" target="_blank"><i class="fab fa-facebook" style="font-size: 45px;"></i></a> 
+
+              <a class="git" href="https://github.com/InnocentKhumalo" title="Github" target="_blank" ><i class="fab fa-github-square" style="font-size: 45px;"></i></a> 
+
+              <a class="whatsapp" href="https://api.whatsapp.com/send?phone=+27639177942" title="Whatsapp" target="_blank"><i class="fab fa-whatsapp"  style="font-size: 45px;"></i></a> 
+              
+              <a class="linkedin" href="https://www.linkedin.com/in/morena-khumalo-9866741a2" title="Linkedin" target="_blank" ><i class="fab fa-linkedin" style="font-size: 45px;"></i></a>
+          </div>
+      </div>
+  </div>
+  <hr/>
+  <p class="copyright">© 2024 LOCALIT Pvt. Ltd.
+  All rights are reserved</p>
+   <div class="credit">Developed  By <span> LocalIt</span></div>
+</footer>
+<script src="https://kit.fontawesome.com/704ff50790.js" crossorigin="anonymous" ></script>
+</body>
+</html>

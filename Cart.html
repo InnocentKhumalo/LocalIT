@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="shopping.css">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .product {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .empty-cart-message {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background-color: #f00;
+            color: #fff;
+            animation: fadeInOut 2s ease-in-out infinite;
+        }
+
+        .total {
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+        .empty-cart-message:hover{
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Shopping Cart</h1>
+    </header>
+
+    <section>
+        <!-- Add more products as needed -->
+    </section>
+
+    <section class="cart">
+        <h2>Cart Items</h2>
+
+        <!-- Empty Cart Message -->
+        <div class="empty-cart-message" id="emptyCartMessage">
+            <p>Your cart is empty.</p>
+            <button onclick="redirectToShoppingPage()">Start Shopping</button>
+        </div>
+
+        <!-- Cart Items -->
+        <!-- Add more cart items as needed -->
+
+        <div class="total">
+            <span>Total:</span>
+            <span>R0.00</span>
+        </div>
+        <button>Checkout</button>
+    </section>
+
+    <script>
+        // Check if the cart is empty and display the message accordingly
+        window.onload = function () {
+            var emptyCartMessage = document.getElementById("emptyCartMessage");
+            var cartSection = document.querySelector(".cart");
+
+            if (cartSection.getElementsByClassName("cart-item").length === 0) {
+                emptyCartMessage.style.display = "block";
+            }
+        };
+
+        // Function to redirect to the shopping page
+        function redirectToShoppingPage() {
+            window.location.href = 'onlineshopping.html';
+            alert("Redirecting to the shopping page...");
+        }
+    </script>
+<footer>
+    <div class="footer">
+        <a href="index.html"><i class="fa fa-home"><span style="display: block; color: black;">Home</span></i></a>
+        <a href="onlineshopping.html"><i class="fas fa-shopping-bag" style="color: black;"><span style="display: block; color: black;">Shop Online </span></i></a>
+        <a href="Shop.html"><i class="fa fa-indent"><span style="display: block; color: black;">Browse</span></i></a>
+        <a href="Adverts.html"><i class="fa fa-broadcast-tower"><span style="display: block; color: black;">Adverts</span></i></a>
+        <a href="Cart.html"><i class="fa fa-shopping-cart"><span style="display: block; color: black;">Cart</span></i></a>
+        <a href="Profile.html"><i class="fas fa-user"><span style="display: block; color: black;">Profile</span></i></a>
+    </div>
+</footer>
+</footer>
+</body>
+</html>

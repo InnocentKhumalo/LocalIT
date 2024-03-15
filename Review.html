@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reviews.css">
+    <title>Document</title>
+</head>
+
+
+<body>
+        <div id="reviews-container">
+          <form action="#">
+            <div><h2>Reviews and feedback</h2></div>
+            <div><textarea id="review-text" rows="8" placeholder="Write your review..." required></textarea></div>
+            
+            <div id="rating-container">
+              <div><span id="rating-text">How did we do:</span></div>
+              <div id="stars-container">
+                <span class="star" onclick="rate(1)">★</span>
+                <span class="star" onclick="rate(2)">★</span>
+                <span class="star" onclick="rate(3)">★</span>
+                <span class="star" onclick="rate(4)">★</span>
+                <span class="star" onclick="rate(5)">★</span>
+              </div>
+            </div>
+            
+            <button class="review-btn"><span>Submit Review</span></button>
+          </form>
+          </div>
+
+          <script> 
+          function rate(stars) {
+            const starELements = document.querySelectorAll('.star');
+            starELements.forEach((star, index) => {star.classList.toggle('active', index < stars);});
+          }
+          function submitReview() {
+            const reviewText = document.getElementById('review-text').value;
+            const stars = document.querySelectorAll('.star.active').length;
+          }
+          </script>
+</body>
+</html>

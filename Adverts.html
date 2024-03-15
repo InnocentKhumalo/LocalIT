@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="shopping.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Advertisement Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            height: 100%;
+            overflow-y: auto;
+        }
+        .item{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: space-around;
+        }
+
+        .item img{
+            width: 130px;
+            height: 130px;
+            bottom: 10px;
+        }
+        #main-content {
+            margin-left: 220px; /* Adjust according to sidebar width */
+            padding: 20px;
+        }
+        #advertisement {
+            margin-bottom: 20px;
+        }
+       
+        #advertisement input[type="file"] {
+            margin-bottom: 10px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        .product img {
+            width: 100%;
+            height: 100%;
+            margin-right: 10px;
+        }
+        .product-details {
+            flex: 1;
+        }
+        .product img:hover{
+            cursor: pointer;
+        }
+        @media only screen and (max-width: 768px) {
+            #sidebar {
+                float: left;
+                width: 30%;
+                padding: 0;
+                height: cover;
+                margin-top: 0;
+                position: fixed;
+            }
+            .header{
+                margin-left: 30%;
+            }
+            #main-content {
+                margin-left: 30%;
+            }
+        }
+        
+        .Advertsbtn-hover {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.Advertsbtn-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.Advertsbtn-hover:focus {
+  outline: none;
+}
+
+.Advertsbtn-hover.Advertsbtn {
+  background-image: linear-gradient(
+    to right,
+    #29323c,
+    #485563,
+    #2b5876,
+    #4e4376
+  );
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+.bn3637 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  backface-visibility: hidden;
+  border: 0.3rem solid transparent;
+  border-radius: 3rem;
+}
+
+.bn37 {
+  border-color: transparent;
+  background-color: #fff;
+  color: #000;
+  transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+}
+  
+.bn37:hover {
+  transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Advertisements</h1>
+        <form action="#" method="get">
+            <input type="text" name="search" placeholder="Search...">
+            <input class="Advertsbtn-hover Advertsbtn" type="submit" value="Search">
+        </form>
+    </header>
+    <div id="sidebar">
+        <h2>Recents</h2>
+        <div class="item">
+            <div class="items" onclick=openDeals() ><i><a href="#"><img src="trending-sticker.jpg" alt="Item 1"></a></i></div>
+            <div class="items" onclick=openDeals() ><i><a href="#"><img src="hot-selling-high-demand-tag-over-white-concept-items-46427130.jpg" alt="Item 2"></a></i></div>
+            <div class="items" onclick=openDeals() ><i><a href="#"><img src="images.jpeg" alt="Item 3"></a></i></div>
+            <div class="items" onclick=openDeals() ><i><a href="#"><img src="exclusive-offer-golden-medal-icon-seal-sig-vector-16516812.jpg" alt="Item 4"></a></i></div>
+            <div class="items" onclick=openDeals() ><i><a href="#"><img src="circular-sticker.jpg" alt="Item 5"></a></i></div>
+            <div class="items" onclick=openDeals() ><i><a href="#"><img src="limited-time-offer-tag-set-vector-illustration-red-77254710.jpg" alt="Item 6"></a></i></div>
+            <div class="items" onclick=openDeals() ><i><a href="#"><img src="F_224683355_0XFlO55GCg9MdMX4aUXw3M5snrpyXx1N.jpg" alt="Item 7"></a></i></div>
+            <div class="items" onclick=openDeals() ><i><a href="#"><img src="tech_1676558718.png" alt="Item 8"></a></i></div>
+            <div class="items" onclick=openDeals() ><i><a href="#"><img src="digital-marketing-megaphone-advertising-5.png" alt="Item 9"></a></i></div>
+            <div class="items" onclick=openDeals() ><i><a href="#"><img src="products-and-services.webp" alt="Item 10"></a></i></div>
+            <div style="margin-bottom: 60px;">
+                <hr>
+            </div>
+        </div>
+    </div>
+    <div id="main-content">
+        <section id="advertisement">
+            <h2>Upload Advertisement</h2>
+            <form action="#"  enctype="multipart/form-data">
+                <input class="Advertsbtn" type="file" name="advertisement_image" accept="image/*">
+                <input type="text" name="advertisement_name" placeholder="Product/Service/Business Name">
+                <input onclick=uploadAdverts() type="submit" value="Upload Advertisement">
+            </form>
+        </section>
+        <section id="advertised-products">
+            <h2>Advertised Products</h2>
+            <div class="product">
+                <img src="products-and-services.webp" alt="Product 1" onclick=viewProducts()>
+                <div class="product-details">
+                    <h3>Product 1</h3>
+                    <p>Description of Product 1</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="products-and-services.webp" alt="Product 2" onclick=viewProducts()>
+                <div class="product-details">
+                    <h3>Product 2</h3>
+                    <p>Description of Product 2</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="products-and-services.webp" alt="Product 3" onclick=viewProducts()>
+                <div class="product-details">
+                    <h3>Product 3</h3>
+                    <p>Description of Product 3</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="products-and-services.webp" alt="Product 4"onclick=viewProducts()>
+                <div class="product-details">
+                    <h3>Product 4</h3>
+                    <p>Description of Product 4</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="products-and-services.webp" alt="Product 5" onclick=viewProducts()>
+                <div class="product-details">
+                    <h3>Product 5</h3>
+                    <p>Description of Product 5</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="products-and-services.webp" alt="Product 6" onclick=viewProducts()>
+                <div class="product-details">
+                    <h3>Product 6</h3>
+                    <p>Description of Product 6</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="products-and-services.webp" alt="Product 7" onclick=viewProducts()>
+                <div class="product-details">
+                    <h3>Product 7</h3>
+                    <p>Description of Product 7</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="products-and-services.webp" alt="Product 8" onclick=viewProducts()>
+                <div class="product-details">
+                    <h3>Product 8</h3>
+                    <p>Description of Product 8</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="products-and-services.webp" alt="Product 9"onclick=viewProducts()>
+                <div class="product-details">
+                    <h3>Product 9</h3>
+                    <p>Description of Product 9</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="products-and-services.webp" alt="Product 10" onclick=viewProducts()>
+                <div class="product-details">
+                    <h3>Product 10</h3>
+                    <p>Description of Product 10</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 60px;">
+                <hr>
+            </div>
+            <!-- Add more products here -->
+        </section>
+    </div>
+</body>
+<footer>
+    <div class="footer">
+        <a href="index.html"><i class="fa fa-home"><span style="display: block; color: black;">Home</span></i></a>
+        <a href="onlineshopping.html"><i class="fas fa-shopping-bag" style="color: black;"><span style="display: block; color: black;">Shop Online </span></i></a>
+        <a href="Shop.html"><i class="fa fa-indent"><span style="display: block; color: black;">Browse</span></i></a>
+        <a href="Adverts.html"><i class="fa fa-broadcast-tower"><span style="display: block; color: black;">Adverts</span></i></a>
+        <a href="Cart.html"><i class="fa fa-shopping-cart"><span style="display: block; color: black;">Cart</span></i></a>
+        <a href="Profile.html"><i class="fas fa-user"><span style="display: block; color: black;">Profile</span></i></a>
+    </div>
+</footer>
+<script>
+    function openDeals() {
+        alert("No deals are uploaded at the moment")
+    }
+    function viewProducts() {
+        alert("Product/Service is not avaiable now!!")
+    }
+    function uploadAdverts() {
+        alert("This function is'nt working currently")
+    }
+</script>
+</html>

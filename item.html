@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Product Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .slides {
+            display: none;
+        }
+
+        .slide {
+            width: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 8px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .product-details {
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .price2{
+            text-align: left;
+            font-size: 20px;
+            font-weight: bold;
+            color: whitesmoke;
+            margin-bottom: 2px;
+            margin-top: 1px;
+        }
+
+        .previous-price {
+            font-size: 16px;
+            color: #999;
+            text-decoration: line-through;
+            margin-right: 10px;
+        }
+
+        .delivery-time {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .availability {
+            font-size: 14px;
+            color: green;
+            margin-bottom: 10px;
+        }
+
+        .seller-info {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .product-description {
+            margin-bottom: 20px;
+        }
+
+        .review-section {
+            margin-bottom: 70px;
+
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 40px;
+        }
+        .review-button{
+            background-color: rgb(27, 32, 97);
+            box-sizing: border-box;
+            border: 1px solid rgb(233, 227, 227);
+            color: #fff;
+            border-radius: 75px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .submit-button {
+            background-color: green;
+            box-sizing: border-box;
+            border: 1px solid rgb(233, 227, 227);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding-top: 1px;
+            width: 80%;
+            font-size: 25px;
+        }
+
+        .slider-container{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+    overflow-x: scroll;
+  }
+  .slider-content{
+    display: flex;
+  }
+  .slider {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #444242;
+    max-width: 700px;
+    height: 200px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+
+  }
+ .slider-item {
+flex: 0 0 30%;
+box-sizing: border-box;
+padding: 5px;
+ }
+ #slider {
+  width: 100%;
+  position: absolute;
+  bottom:  0;
+  cursor: pointer;
+ }
+ .slider-text{
+    position: absolute;
+    text-align: left;
+ }
+  
+  .slider:hover {
+    cursor: pointer;
+  }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Product Display</h1>
+</header>
+
+<div class="slideshow-container">
+    <div class="slides">
+        <div class="slide"><img src="products-and-services.webp" alt="Product Image 1"></div>
+        <div class="slide"><img src="products-and-services.webp" alt="Product Image 2"></div>
+        <div class="slide"><img src="products-and-services.webp" alt="Product Image 3"></div>
+        <!-- Add more slides as needed -->
+    </div>
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+</div>
+
+<div class="container">
+    
+
+    <div class="product-details">
+        <h2>Product Name</h2>
+        <p>Quality: High Quality</p>
+        <p class="price">Price: R Price</p>
+        <p class="previous-price">R Price</p>
+        <p class="delivery-time">Estimated Delivery Time: 3-5 Business Days</p>
+        <p class="availability">In Stock</p>
+        <p class="seller-info">Sold by: Seller Name, Location</p>
+    </div>
+<h3>Similar Items:</h3>
+<div class="slider-container">
+    <div class="slider-content" id="sliderContent">
+<div class="slider slider-item ">
+    <div><img src="" alt="Similar Items Image"></div>
+    <div class="slider-text">
+        <p>Product Name</p>
+    <p style="font-weight: bold;">R price</p>
+    <p style="text-decoration: line-through; color: #666;">R price</p>
+    </div>
+</div>
+<div class="slider slider-item ">
+    <div><img src="" alt="Similar Items Image"></div>
+    <div class="slider-text">
+        <p>Product Name</p>
+    <p style="font-weight: bold;">R price</p>
+    <p style="text-decoration: line-through; color: #666;">R price</p>
+    </div>
+</div>
+<div class="slider slider-item ">
+    <div><img src="" alt="Similar Items Image"></div>
+    <div class="slider-text">
+        <p>Product Name</p>
+    <p style="font-weight: bold;">R price</p>
+    <p style="text-decoration: line-through; color: #666;">R price</p>
+    </div>
+</div>
+<div class="slider slider-item ">
+    <div><img src="" alt="Similar Items Image"></div>
+    <div class="slider-text">
+        <p>Product Name</p>
+    <p style="font-weight: bold;">R price</p>
+    <p style="text-decoration: line-through; color: #666;">R price</p>
+    </div>
+</div>
+<div class="slider slider-item ">
+    <div><img src="" alt="Similar Items Image"></div>
+    <div class="slider-text">
+        <p>Product Name</p>
+    <p style="font-weight: bold;">R price</p>
+    <p style="text-decoration: line-through; color: #666;">R price</p>
+    </div>
+</div>
+<div class="slider slider-item ">
+    <div><img src="" alt="Similar Items Image"></div>
+    <div class="slider-text">
+        <p>Product Name</p>
+    <p style="font-weight: bold;">R price</p>
+    <p style="text-decoration: line-through; color: #666;">R price</p>
+    </div>
+</div>
+<div class="slider slider-item ">
+    <div><img src="" alt="Similar Items Image"></div>
+    <div class="slider-text">
+        <p>Product Name</p>
+    <p style="font-weight: bold;">R price</p>
+    <p style="text-decoration: line-through; color: #666;">R price</p>
+    </div>
+</div>
+<div class="slider slider-item ">
+    <div><img src="" alt="Similar Items Image"></div>
+    <div class="slider-text">
+        <p>Product Name</p>
+    <p style="font-weight: bold;">R price</p>
+    <p style="text-decoration: line-through; color: #666;">R price</p>
+    </div>
+</div>
+<div class="slider slider-item ">
+    <div><img src="" alt="Similar Items Image"></div>
+    <div class="slider-text">
+        <p>Product Name</p>
+    <p style="font-weight: bold;">R price</p>
+    <p style="text-decoration: line-through; color: #666;">R price</p>
+    </div>
+</div>
+</div>
+
+</div>
+    <div class="product-description">
+        <h3>Product Description</h3>
+        <p style="font-style: italic;">Add product Description...
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        </p>
+    </div>
+
+    <div class="review-section">
+        <h3>Product Reviews</h3>
+        <p style="font-style: italic; color: #666;">leave a review about the particular produtct</p>
+        <p><span style="cursor: pointer;
+            color: rgb(155, 151, 151);
+            font-size: 30px;">★</span> no os stars</p>
+        <button class="review-button" onclick="redirectToReviewsPage()">Write Review</button>
+    </div>
+</div>
+
+<footer>
+    <div class="footer">
+        <p class="price2">Total Price: R 0.00</p>
+    <button class="submit-button"><i class="fa fa-shopping-cart">Add to Cart</i></button>
+    </div>
+    
+</footer>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.querySelectorAll('.slides .slide');
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+
+    function changeSlide(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function redirectToReviewsPage() {
+            window.location.href = 'Review.html';
+    }
+</script>
+
+</body>
+</html>

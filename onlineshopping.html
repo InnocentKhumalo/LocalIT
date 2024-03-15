@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="shopping.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin="anonymous"></script>
+    <title>Online Shopping</title>
+</head>
+<body>
+    
+    <nav class="shoppingNav">
+        <img src="SGN_03_08_2024_1709886189056.jpg" class="logo">
+        <a href="Cart.html" class="split"><i class="fas fa-shopping-cart" style="font-size: 30px;  color: darkgray; margin-top: 10px; margin-right: 15px;"></i></a>
+        <div class="searchpane">
+            <div class="search-container">
+              <div class="searchtext">
+              <input class="icon" type="search" placeholder="Search products,services...">
+              </div>
+            </div>
+
+        </div>
+    </nav>
+<div class="shopping-container">
+            <h4>Advertised Products</h4>
+            <div class="adverts">
+                <div><img src="trending-sticker.jpg" alt="adverts Image 1" onclick=openAds()>
+                    <p>Trending</p></div>
+
+                <div><img src="F_224683355_0XFlO55GCg9MdMX4aUXw3M5snrpyXx1N.jpg" alt="adverts Image 2" onclick=openAds()>
+                    <p>Hot <br> Deals</p></div>
+
+                <div><img src="hot-selling-high-demand-tag-over-white-concept-items-46427130.jpg" alt="adverts Image 3" onclick=openAds()>
+                    <p> High <br> Demand</p></div>
+
+                <div><img src="circular-sticker.jpg" alt="adverts Image 4" onclick=openAds()>
+                    <p>New</p></div>
+
+            </div>
+</div>
+
+<div class="products-container">
+        <h4>Shop All Products</h4>
+        <div class="products-section">
+            <div class="products">
+                <div>
+                    <img src="limited-time-offer-tag-set-vector-illustration-red-77254710.jpg" alt="products Image 2" onclick=openProduct()>
+                    <p>Product Name</p>
+                    <p>R Price</p>
+                    <p style="text-decoration: line-through;">R Price</p>
+                </div>
+            </div>
+            <div class="products">
+                <div>
+                    <img src="limited-time-offer-tag-set-vector-illustration-red-77254710.jpg" alt="products Image 3" onclick=openProduct()>
+                    <p>Product Name</p>
+                    <p>R Price</p>
+                    <p style="text-decoration: line-through;">R Price</p>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+
+        <div class="products-section">
+            <div class="products">
+                <div>
+                    <img src="limited-time-offer-tag-set-vector-illustration-red-77254710.jpg" alt="products Image 5" onclick=openProduct()>
+                    <p>Product Name</p>
+                    <p>R Price</p>
+                    <p style="text-decoration: line-through;">R Price</p>
+                </div>
+            </div>
+            <div class="products">
+                <div>
+                    <img src="limited-time-offer-tag-set-vector-illustration-red-77254710.jpg" alt="products Image 6" onclick=openProduct()>
+                    <p>Product Name</p>
+                    <p>R Price</p>
+                    <p style="text-decoration: line-through;">R Price</p>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <h3>Shop By Stores</h3>
+            <div class="slider-container">
+                <div class="slider-content" id="sliderContent">
+            <div class="slider slider-item " onclick=openStore() >Shop Name</div>
+            <div class="slider slider-item " onclick=openStore() >Shop Name</div>
+            <div class="slider slider-item " onclick=openStore() >Shop Name</div>
+            <div class="slider slider-item " onclick=openStore() >Shop Name</div>
+            <div class="slider slider-item " onclick=openStore() >Shop Name</div>
+            <div class="slider slider-item " onclick=openStore() >Shop Name</div>
+            <div class="slider slider-item " onclick=openStore() >Shop Name</div>
+            <div class="slider slider-item " onclick=openStore() >Shop Name</div>
+            <div class="slider slider-item " onclick=openStore() >Shop Name</div>
+            </div>
+        
+            </div>
+        </div>
+
+        <div class="products-section">
+            <div class="products">
+                <div>
+                    <img src="limited-time-offer-tag-set-vector-illustration-red-77254710.jpg" alt="products Image 9" onclick=openProduct()>
+                    <p >Product Name</p>
+                    <p>R Price</p>
+                    <p style="text-decoration: line-through;">R Price</p>
+                </div>
+            </div>
+            <div class="products">
+                <div>
+                    <img src="limited-time-offer-tag-set-vector-illustration-red-77254710.jpg" alt="products Image 10" onclick=openProduct()>
+                    <p>Product Name</p>
+                    <p>R Price</p>
+                    <p style="text-decoration: line-through;">R Price</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div >
+                <h3>Discover more</h3>
+                </div>
+                <div class="categories-container">
+                    <div class="categories-content" id="categoriesContent">
+                <div class="categories categories-item " onclick=openProduct() style=" background-size: cover; background-image: url(Hv1hzkwGlgs-056AAhtosgHR9UwBPm5oftInTPy6BXk-1.jpeg); background-repeat: no-repeat" >Clothes</div>
+                <div class="categories categories-item " onclick=openProduct() style=" background-size: cover; background-image: url(toiletries-img.jpg); background-repeat: no-repeat" >Toiletries</div>
+                <div class="categories categories-item " onclick=openProduct() style=" background-size: cover; background-image: url(assortment-of-fruits.jpg); background-repeat: no-repeat" >Fruits</div>
+                <div class="categories categories-item " onclick=openProduct() style=" background-size: cover; background-image: url(shutterstock_1136753939-1024x683.jpg); background-repeat: no-repeat" >Home</div>
+                <div class="categories categories-item " onclick=openProduct() style=" background-size: cover; background-image: url(tech_1676558718.png); background-repeat: no-repeat" >Technology</div>
+                <div class="categories categories-item " onclick=openProduct() style=" background-size: cover; background-image: url(balls-isolated-on-white.jpg); background-repeat: no-repeat" >Sports</div>
+                <div class="categories categories-item " onclick=openProduct() style=" background-size: cover; background-image: url(vegetables.jpg); background-repeat: no-repeat" >Vegetables</div>
+                <div class="categories categories-item " onclick=openProduct() style=" background-size: cover; background-image: url(IMG_1188.jpg); background-repeat: no-repeat" >Snack</div>
+                <div class="categories categories-item " onclick=openProduct() style=" background-size: cover; background-image: url(drinks-around-the-world.jpg); background-repeat: no-repeat" >Beverages</div>
+                <div class="categories categories-item " onclick=openProduct() style=" background-size: cover; background-image: url(Skincare.jpg); background-repeat: no-repeat" >Health and Beauty</div>
+                </div>
+            
+                </div>
+        
+        <div class="products-section">
+            <div class="products">
+                <div>
+                    <img src="limited-time-offer-tag-set-vector-illustration-red-77254710.jpg" alt="products Image 13" onclick=openProduct()>
+                    <p>Product Name</p>
+                    <p>R Price</p>
+                    <p style="text-decoration: line-through;">R Price</p>
+                </div>
+            </div>
+            <div class="products">
+                <div>
+                    <img src="limited-time-offer-tag-set-vector-illustration-red-77254710.jpg" alt="products Image 14" onclick=openProduct()>
+                    <p>Product Name</p>
+                    <p>R Price</p>
+                    <p style="text-decoration: line-through;">R Price</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="products-section">
+            <div class="products" style="margin-bottom: 70px; width: auto; ">
+                <div>
+                    <img style="height: 200px; width: 800px;" src="products-and-services.webp" alt="products Image 17" onclick=openProduct()>
+                    <p>Product Name</p>
+                    <p>R Price</p>
+                    <p style="text-decoration: line-through;">R Price</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        function openProduct() {
+            alert("Content is not available at the moment")
+        }
+
+        function openStore() {
+            alert("Shop is not registered yet!!")
+        }
+
+        function openAds() {
+            alert("No advertisements avilable now")
+        }
+    </script>
+    <footer>
+        <div class="footer">
+            <a href="index.html"><i class="fa fa-home"><span style="display: block; color: black;">Home</span></i></a>
+            <a href="onlineshopping.html"><i class="fas fa-shopping-bag" style="color: black;"><span style="display: block; color: black;">Shop Online </span></i></a>
+            <a href="Shop.html"><i class="fa fa-indent"><span style="display: block; color: black;">Browse</span></i></a>
+            <a href="Adverts.html"><i class="fa fa-broadcast-tower"><span style="display: block; color: black;">Adverts</span></i></a>
+            <a href="Cart.html"><i class="fa fa-shopping-cart"><span style="display: block; color: black;">Cart</span></i></a>
+            <a href="Profile.html"><i class="fas fa-user"><span style="display: block; color: black;">Profile</span></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>
