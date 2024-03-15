@@ -36,7 +36,11 @@ body{
     padding: 10px;
     padding-top: 50px;
 }
-
+@media only screen and (max-width: 600px){
+.column-container{
+    flex-direction: column;
+}
+}
 .column1{
     width: 50%;
     box-sizing: border-box;
